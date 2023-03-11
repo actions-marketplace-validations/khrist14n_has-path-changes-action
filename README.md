@@ -36,7 +36,7 @@ jobs:
     # This step will evaluate the path of the repo status and report the change
     - name: Check if there are changes
       id: changes
-      uses: UnicornGlobal/has-changes-action@v1.0.11
+      uses: khrist14n/has-path-changes-action
       path: changes_path
 
     # You can now access a variable indicating if there have been changes
