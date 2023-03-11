@@ -1,0 +1,18 @@
+name: "Has Path Changes"
+description: "Check if a path of a git repository has changes"
+branding:
+  icon: "info"
+  color: "yellow"
+inputs:
+  path:
+    description: "Path to check changes in repo."
+    required: false
+    default: ""
+outputs:
+  changed:
+    description: "Changes in path of the repo"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args: 
+    - ${{ inputs.path }}
